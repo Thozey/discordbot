@@ -6,4 +6,4 @@ client.start(process.env.TOKEN);
 
 setInterval(() => {
   console.log("salut")
-  }, 30000)
+  }, 300000)

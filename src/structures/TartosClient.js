@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const { embed } = require('../util/functions');
-const { TOKEN, MONGOSTRING } = require('../util/config');
 const { GuildsProvider } = require('../structures/Providers');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 
@@ -61,7 +60,7 @@ module.exports = class TartosClient extends AkairoClient {
 
   async start(){
     try {
-      await mongoose.connect(MONGOSTRING, {
+      await mongoose.connect(process.env.MONGOSTRING, {
         useNewUrlParser: true, 
         useUnifiedTopology: true
       });
@@ -71,6 +70,6 @@ module.exports = class TartosClient extends AkairoClient {
       return process.exit();
     }
     await this.init();
-    return this.login(TOKEN);
+    return this.login(process.env.TOKEN);
   }
 }
