@@ -1,6 +1,9 @@
 {
   "name": "botv13",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.6.0"
+  },
   "description": "",
   "main": "./src/index.js",
   "scripts": {
