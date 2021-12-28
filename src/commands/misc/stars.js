@@ -4,6 +4,7 @@ class StarsCommand extends Command {
     constructor() {
         super('stars', {
            aliases: ['stars'],
+           cooldown: 86400000,
            description: {
                content: 'La commande stars envoie une photo pour participer à l\'event stars',
                usage: 'stars',
