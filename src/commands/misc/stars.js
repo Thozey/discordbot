@@ -21,12 +21,15 @@ class StarsCommand extends Command {
       const stars = this.client.channels.cache.get('881596889462632448');
       if(!message.attachments.size) return message.channel.send("Impossible")
       if(message.attachments.size >= 2) return message.channel.send("Impossible")
-      return stars.send({ embeds: [
+      stars.send({ embeds: [ 
         this.client.functions.embed() 
           .setTitle(`Selfie de ${message.author.username}`) 
           .setImage(message.attachments.first().url),
-      ]});
-    }
+      ]})
+      .then(async msg => {  
+      msg.react('925418612435607654');
+    });
+  }
 }
 
 module.exports = StarsCommand;
