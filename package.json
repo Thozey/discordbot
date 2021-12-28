@@ -15,6 +15,7 @@
     "common-tags": "^1.8.2",
     "discord-akairo": "npm:@notenoughupdates/discord-akairo@^9.0.9",
     "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
     "mongoose": "^6.1.2",
     "yarn": "^1.22.17"
   }
