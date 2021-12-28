@@ -4,6 +4,8 @@ class ClearCommand extends Command {
   constructor() {
     super('clear', {
       aliases: ['clear'],
+      clientPermissions: ['BAN_MEMBERS'],
+      userPermissions: ['BAN_MEMBERS'],
       description: {
         content: 'La commande clear supprime les messages d\'un utilisateur !',
         usage: 'clear',
