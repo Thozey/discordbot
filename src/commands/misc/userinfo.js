@@ -4,15 +4,12 @@ class UserInfoCommand extends Command {
     constructor() {
         super('userinfo', {
            aliases: ['userinfo', 'info'],
-           // description: 'Affiche les informations de l\'utilisateur'
+           description: 'Affiche les informations de l\'utilisateur',
            ignoreCooldown: '375235234322448385',
            ignorePermissions: '375235234322448385',
-           userPermissions: 'KICK_MEMBERS',
-           clientPermissions: 'KICK_MEMBERS',
            ratelimit: 2,
            cooldown: 5000,
            typing: true,
-           ownerOnly: true,
            channel: 'guild',
            category: 'Misc',
            description: {
