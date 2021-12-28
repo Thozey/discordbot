@@ -1,6 +1,6 @@
+require("dotenv").config();
 const mongoose = require('mongoose');
 const { embed } = require('../util/functions');
-const { MONGOSTRING, TOKEN } = require('../util/config')
 const { GuildsProvider } = require('../structures/Providers');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 
@@ -18,8 +18,8 @@ module.exports = class TartosClient extends AkairoClient {
           status: 'dnd',
           activities: [ 
             {
-              name: 'TartosFraises',
-              type: 'STREAMING',
+              name: 'avec Fraisou',
+              type: 'PLAYING',
               url:  'https://www.youtube.com/c/getCodingKnowledge'
             }
             
@@ -61,7 +61,7 @@ module.exports = class TartosClient extends AkairoClient {
 
   async start(){
     try {
-      await mongoose.connect(MONGOSTRING, {
+      await mongoose.connect(process.env.MONGOSTRING, {
         useNewUrlParser: true, 
         useUnifiedTopology: true
       });
@@ -71,6 +71,6 @@ module.exports = class TartosClient extends AkairoClient {
       return process.exit();
     }
     await this.init();
-    return this.login(TOKEN);
+    return this.login(process.env.TOKEN);
   }
 }
