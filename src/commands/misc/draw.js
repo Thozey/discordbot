@@ -4,6 +4,7 @@ class DrawCommand extends Command {
     constructor() {
         super('draw', {
            aliases: ['draw', 'dessin'],
+           cooldown: 86400000,
            description: {
                content: 'La commande stars envoie une photo pour participer à l\'event draw',
                usage: 'draw',
