@@ -23,6 +23,7 @@ const salon = client.channels.cache.get("881587222829211658")
           if (message.author.id === "720012853788278866") return;
           if (message.author.id === "778557585552310293") return;
           if (message.author.id === "689012956620783888") return;
+          if (message.author.id === "944852020391718953") return;
           if (message.member.roles.cache.has(`881580122514264064`)) return;
             await message.delete();
             await message.channel.send(`**Tu n'as pas la permission de faire cela !**`);
